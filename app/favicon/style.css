@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic');
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    outline: none;
+    border: none;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    max-width: 1920px;
+    height: 100%;
+    overflow: hidden;
+    /* min-width: 1184px; */
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    top: 0;
+    transition: top 500ms;
+}
+
+.container-bigImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.container-bigImg__img {
+    width: 65%;
+    height: 65%;
+    margin: auto;
+    border: 10px solid #fff;
+    border-radius: 5px;
+}
+
+.container-bigImg__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    /* height: 820px; */
+    /* min-height: 100%; */
+    background-size: 100% 100%;
+    display: flex;
+}
+
+.background-blur {
+    background-image: url(../img/gallery/6-gallery.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.header__container {
+    margin: auto;
+}
+
+.header__computer {
+    position: relative;
+}
+
+.header__computer-img {
+    width: 710px;
+    height: 424px;
+    position: relative;
+    z-index: 99;
+    background-image: url(../img/other/as1.png);
+    margin: auto;
+}
+
+.header__game-img {
+    width: 654px;
+    height: 370px;
+    position: absolute;
+    z-index: 1;
+    left: 28px;
+    top: 27px;
+}
+
+.container-caption__main-caption {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 100;
+    font-size: 45px
+}
+
+.btn-link {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff6d6d;
+    width: 190px;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 17px;
+    margin: auto;
+    margin-top: 25px;
+    transition: background-color 500ms;
+}
+
+.about-game {
+    width: 100%;
+    /* padding: 20px 0; */
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(224, 224, 224, 0.1);
+}
+
+.about-game__container {
+    /* width: 860px; */
+    display: flex;
+    flex-grow: 1;
+}
+
+.about-game__content {
+    margin: auto;
+    width: 570px;
+    padding: 20px;
+}
+
+.about-game__discription {
+    color: #717171;
+}
+
+.about-game__img {
+    font-size: 0;
+    position: relative;
+    flex-grow: 1;
+}
+
+.about-game__img>img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery {
+    width: 100%;
+    /* padding: 20px 0; */
+    background-color: #f9f9f9;
+}
+
+.gallery__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.gallery__container img {
+    width: 375px;
+    height: 375px;
+    margin: 2px;
+    cursor: pointer;
+    border: 3px solid #fff;
+    transition: all 500ms;
+}
+
+.about-team {
+    width: 100%;
+    /* padding: 20px 0; */
+    /* background-color: rgba(224, 224, 224, 0.1); */
+    /* background-color: #222222; */
+}
+
+.about-team__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.about-team__container_margin-bottom {
+    margin-bottom: 25px;
+}
+
+.about-team__content {
+    /* width: 290px; */
+    width: 330px;
+    /* border:5px solid #fff; */
+    border-radius: 5px;
+    /* height: 300px; */
+    /* border: 1px dashed #f00; */
+}
+
+.about-team__content_bg-black {
+    background-color: #222222;
+}
+
+.about-team__info-user {
+    padding: 10px;
+    text-align: center;
+    /* color:#fff;     */
+}
+
+
+/* .about-team__info-user_color-white {
+    color: #fff;
+} */
+
+.about-team__name {
+    font-size: 18px;
+    text-transform: uppercase;
+    /* padding-top: 10px; */
+    display: block;
+}
+
+.about-team__position {
+    font-size: 14px;
+    /* padding-bottom: 20px;     */
+    display: block;
+}
+
+.about-team__avatar {
+    width: 100%;
+    height: 328px;
+    position: relative;
+    cursor: pointer;
+}
+
+.about-team__avatar>img {
+    width: 100%;
+    height: 100%;
+}
+
+.about-team__cover-user {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.about-team__ul {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.about-team__social {
+    margin: 0 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.about-team__social__facebook {
+    background-image: url(../img/social/facebook.png);
+}
+
+.about-team__social__vk {
+    background-image: url(../img/social/vk.png);
+}
+
+.question {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.question__container {
+    width: 100%;
+}
+
+.question__form {
+    display: flex;
+    font-size: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 700px;
+    margin: auto;
+}
+
+.question__cover {
+    position: relative;
+}
+
+.question__affect-line {
+    width: 5px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #0d72ab;
+    visibility: hidden;
+    transition: all 500ms;
+}
+
+.question__input {
+    width: 340px;
+    padding: 5px 0;
+    border-bottom: 1px solid #000;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.question__textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #000;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.question__submit {
+    width: 156px;
+    height: 45px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    margin: auto;
+    background-color: #ff6d6d;
+    display: block;
+    transition: background-color 500ms;
+}
+
+.caption-c {
+    padding: 40px 0;
+}
+
+.caption-c_text-center {
+    text-align: center;
+}
+
+.h2 {
+    font-weight: 700;
+    font-size: 35px;
+    /* color: #282828; */
+    color: #556b72;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.caption-c__dots {
+    color: #fb8686;
+    font-size: 35px;
+}
+
+.panle-side {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 10px;
+    top: 45%;
+    position: fixed;
+    z-index: 999;
+}
+
+.panle-side__section {
+    background-image: url(../img/other/two-circles.png);
+    background-size: 24px 24px;
+    background-position: 2px;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 15px;
+    padding: 2px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.panle-side__section_mode {
+    background-position: -11px;
+}
+
+.panle-side__info {
+    position: absolute;
+    width: 100px;
+    right: 15px;
+    top: 0;
+    z-index: -1;
+    font-size: 12px;
+    text-align: right;
+    display: none;
+}
+
+.gallery__container img:hover {
+    border: 3px solid #000;
+}
+
+.about-team__avatar:hover .about-team__cover-user {
+    display: block;
+}
+
+.about-team__social__facebook:hover {
+    background-image: url(../img/social/facebook-hover.png);
+}
+
+.about-team__social__vk:hover {
+    background-image: url(../img/social/vk-hover.png);
+}
+
+.question__input:focus+.question__affect-line {
+    width: 100%;
+    visibility: visible;
+}
+
+.btn-link:hover,
+.question__submit:hover {
+    background-color: #0d72ab;
+}
+
+.panle-side__section:hover .panle-side__info {
+    display: block;
+}
+
+@media screen and (max-width:1720px) {
+    .gallery__container img {
+        width: 340px;
+    }
+}
+
+@media screen and (max-width:1480px) {
+    .gallery__container img {
+        width: 290px;
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .gallery__container img {
+        width: 250px;
+    }
+    .wrapper {
+        overflow: auto;
+    }
+    .panle-side {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .gallery__container img {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .about-team__content {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width:965px) {
+    .gallery__container img {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 781px) {
+    .about-team__content {
+        width: 185px;
+    }
+    .about-game__img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .header__computer {
+        display: none;
+    }
+    .header__container {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .gallery__container img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .about-game__content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .about-team__content {
+        width: 301px;
+    }
+    .about-team__container_margin-bottom {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .gallery__container img,
+    .about-team__content {
+        width: 280px;
+    }
+}
+
+
+/* height */
+
+@media screen and (max-height:960px) {
+    .about-team__avatar {
+        height: 280px;
+    }
+}
+
+@media screen and (max-height:920px) {
+    .gallery__container img {
+        height: 320px;
+    }
+}
+
+@media screen and (max-height:857px) {
+    .about-team__avatar {
+        height: 245px;
+    }
+}
+
+@media screen and (max-height:815px) {
+    .gallery__container img {
+        height: 280px;
+    }
+}
+
+@media screen and (max-height:790px) {
+    .about-team__avatar {
+        height: 233px;
+    }
+    .about-team__container_margin-bottom {
+        margin-bottom: 10px;
+    }
+    .about-team__info-user {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-height:720px) {
+    .gallery__container img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:1239px) {
+    .about-team,
+    .header,
+    .about-game,
+    .gallery,
+    .question {
+        height: auto !important;
+        padding: 25px 0;
+    }
+}
